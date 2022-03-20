@@ -1,11 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "O_n_.exe"
-		},
-		{
-			"path" : "O_n_.pdb"
+			"path" : "libs/libsortArray.a"
 		}
 	],
 	"backtrace" : 1,
@@ -13,11 +11,12 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_library",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"libs/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -27,7 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -59,32 +64,20 @@
 			]
 		}
 	],
-	"id" : "O_n_::@6890427a1f51a3e7e1df",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
-			}
-		],
-		"language" : "C"
-	},
-	"name" : "O_n_",
-	"nameOnDisk" : "O_n_.exe",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "algorithms::@10801ec9068017628f26"
+		}
+	],
+	"id" : "sortArray::@10801ec9068017628f26",
+	"name" : "sortArray",
+	"nameOnDisk" : "libsortArray.a",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "libs",
+		"source" : "libs"
 	},
 	"sourceGroups" : 
 	[
@@ -101,9 +94,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "libs/sortArray/sortArray.c",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "STATIC_LIBRARY"
 }

@@ -1,3 +1,7 @@
 D:/_Work/_GitHub/O(n)/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/_Work/_GitHub/O(n)/cmake-build-debug/CMakeFiles/O_n_.dir
 D:/_Work/_GitHub/O(n)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/_Work/_GitHub/O(n)/cmake-build-debug/libs/CMakeFiles/algorithms.dir
+D:/_Work/_GitHub/O(n)/cmake-build-debug/libs/CMakeFiles/sortArray.dir
+D:/_Work/_GitHub/O(n)/cmake-build-debug/libs/CMakeFiles/edit_cache.dir
+D:/_Work/_GitHub/O(n)/cmake-build-debug/libs/CMakeFiles/rebuild_cache.dir
