@@ -24,26 +24,26 @@ void digitalSort(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Сортировку обменом массива a размера n */
-long long bubbleSortNComp(int *a, size_t n);
+unsigned long long bubbleSortNComp(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Сортировку выбором массива a размера n */
-long long selectionSortNComp(int *a, size_t n);
+unsigned long long selectionSortNComp(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Сортировку вставками массива a размера n */
-long long insertionSortNComp(int *a, size_t n);
+unsigned long long insertionSortNComp(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Сортировку расческой массива a размера n */
-long long combSortNComp(int *a, size_t n);
+unsigned long long combSortNComp(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Сортировку Шелла массива a размера n */
-long long shellSortNComp(int *a, size_t n);
+unsigned long long shellSortNComp(int *a, size_t n);
 
 /* Возвращает количество операций сравнений и выполняет
  * Цифровую сортировку целочисленного массива a размера n */
-long long digitalSortNComp(int *a, size_t n);
+unsigned long long digitalSortNComp(int *a, size_t n);
 
 #endif //O_N__SORTARRAY_H
