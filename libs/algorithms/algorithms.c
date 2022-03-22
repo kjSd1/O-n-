@@ -63,3 +63,8 @@ void assertArray(int *a, size_t n, int line, const char* name) {
     else
         fprintf(stderr, "%s on line %d \n\t result test: Error\n", name, line);
 }
+
+void copyArray_(const int *data, int *beginCopy, size_t n) {
+    for (size_t index = 0; index < n; index++)
+        beginCopy[index] = data[index];
+}

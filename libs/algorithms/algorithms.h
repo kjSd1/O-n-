@@ -43,6 +43,11 @@ int compare_intsReverse(const void *a, const void *b);
 /* Обмен значений целочисленных переменных по адресам a и b */
 void swapInts(int *a, int *b);
 
-void assertArray(int *a,size_t n, int line, const char *name);
+/* Проверка на упорядоченность массива a размера n.
+ * Вывод в консоль названия функции и строки вызова проверки массива, а также сообщение с результатом */
+void assertArray(int *a, size_t n, int line, const char *name);
+
+/* Копирует массив из адреса data размера n по адресу beginCopy */
+void copyArray_(const int *data, int *beginCopy, size_t n);
 
 #endif //O_N__ALGORITHMS_H

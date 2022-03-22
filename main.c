@@ -3,7 +3,6 @@
 #include "libs/algorithms/algorithms.h"
 #include "libs/sortArray/sortArray.h"
 
-
 // функция сортировки
 typedef struct SortFunc {
     void (*sort) (int *a, size_t n); // указатель на функцию сортировки
@@ -60,9 +59,14 @@ void checkTime(void (*sortFunc) (int*, size_t), void (*generateFunc) (int *, siz
 void timeExperiment () {
     // описание функций сортировки
     SortFunc sorts[] = {
+                {bubbleSort, "bubbleSort"},
                 {selectionSort, "selectionSort"},
                 {insertionSort, "insertionSort"},
-                // вы добавите свои сортировки
+                {combSort, "combSort"},
+                {shellSort, "shellSort"},
+                {digitalSort, "digitalSort"}
+
+            // вы добавите свои сортировки
             };
     const unsigned FUNCS_N = ARRAY_SIZE(sorts);
 
@@ -116,9 +120,52 @@ void test_insertionSort() {
     TEST_SORT(arrayRandom, n);
 }
 
+void test_bubbleSort() {
+    int n = 10;
+    int arrayRandom[10];
+    generateRandomArray(arrayRandom, n);
+
+    bubbleSort(arrayRandom, n);
+
+    TEST_SORT(arrayRandom, n);
+}
+
+void test_combSort() {
+    int n = 10;
+    int arrayRandom[10];
+    generateRandomArray(arrayRandom, n);
+
+    combSort(arrayRandom, n);
+
+    TEST_SORT(arrayRandom, n);
+}
+
+void test_shellSort() {
+    int n = 1000;
+    int arrayRandom[1000];
+
+    generateRandomArray(arrayRandom, n);
+    shellSort(arrayRandom, n);
+    TEST_SORT(arrayRandom, n);
+}
+
+void test_digitalSort() {
+    int n = 10;
+    int arrayRandom[10];
+    generateRandomArray(arrayRandom, n);
+
+    digitalSort(arrayRandom, n);
+
+    TEST_SORT(arrayRandom, n);
+}
+
 void test() {
     test_selectionSort();
     test_insertionSort();
+    test_bubbleSort();
+    test_combSort();
+    test_shellSort();
+    test_digitalSort();
 }
 
 int main() {
