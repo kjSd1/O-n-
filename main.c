@@ -65,7 +65,7 @@ void checkNComps(unsigned long long (*sortFunc) (int*, size_t), void (*generateF
     static size_t runCounter = 1;
 
     // генерация последовательности
-    static int innerBuffer[100000];
+    static int innerBuffer[1000000];
     generateFunc(innerBuffer, size);
     printf ("Run #%zu| ", runCounter++);
     printf ("Name: %s\n", experimentName);
@@ -135,8 +135,8 @@ void timeExperiment () {
     const unsigned CASES_N = ARRAY_SIZE(generatingFuncs);
 
     // запись статистики в файл
-    /*for (size_t size = 10000; size <= 100000; size += 10000) {
-        printf("------------------------------\n") ;
+    for (size_t size = 10000; size <= 100000; size += 10000) {
+        printf("------------------------------\n");
         printf("Size: %d\n", size);
 
         for (int i = 0; i < FUNCS_N; i++) {
@@ -149,7 +149,7 @@ void timeExperiment () {
         }
 
         printf("\n");
-    }*/
+    }
 
     for (size_t size = 10000; size <= 100000; size += 10000) {
         printf("------------------------------\n") ;
@@ -237,7 +237,8 @@ void test() {
 }
 
 int main() {
-    timeExperiment();
+    for (size_t index = 0; index < 3; index++)
+        timeExperiment();
 
     //test();
     return 0;
